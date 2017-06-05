@@ -1,86 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Playball|Sigmar+One);
 body {
-	background-image: url(../images/kremlin.jpg);
-	background-position: center top;
-}
-
-.page-header {
-	background: rgba(224, 224, 209, .8);
-	margin: 20px 0 0 0;
+    background-image: url(../images/kremlin.jpg);
+    background-position: center top;
 }
 
 h1 {
-	font-family: 'Sigmar One', cursive;
-}
-
-small {
-	text-shadow: 1px 1px #ffffff;
+    font-family:'Sigmar One', Cursive;
+    text-align: center;
+    font-size: 1.8em;
 }
 
 .subTitle {
-	font-family: 'Playball', cursive;
-	color: crimson;
-	font-size: .9em;
+    font-family: 'Playball', cursive;
+    font-size: 2em;
+    text-align: center;
+    color: crimson;
+    text-shadow: 1px 1px #ffffff;
+    margin-top: 10px;
 }
 
-.imgBG {
-	padding-top: 10px;
-	background: rgba(224, 224, 209, .6);
+
+.img-responsive {
+    height: 200px;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 10px;
+}
+li {
+    font-family: "Arial", sans-serif;
+    font-size: 2em;
+}
+input[type=radio] {
+    border: 0px;
+    width: 20px;
+    height: 1em;
+    padding-right: 10px;
+}
+
+ .quizContainer {
+    background: rgba(224, 224, 209, .8);
+    border-radius: 6px;
+    width: 75%;
+    margin: 20px auto;
+    padding: 20px;
+    -moz-box-shadow: 5px 5px 2px #888;
+    -webkit-box-shadow: 5px 5px 2px #888;
+    box-shadow: 5px 5px 2px #888;
+    position: relative;
+}
+.nextButton {
+    box-shadow: 3px 3px 5px #888;
+    border-radius: 6px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    background-color: crimson;
+    /*clear: both;*/
+    color: gold;
+    font-family:'Sigmar One', Cursive;
+    position: relative;
+    margin: 15px auto 0 auto;
+    padding-top: 10px;
 }
 
 .question {
-	text-align: center;
-	background: rgba(224, 224, 209, .6);
-	font-family: 'Sigmar One', cursive;
-	font-size: 1.8em;
-	padding-top: 25px;
-	/*margin-top: 10px;*/
-}
-
-.choiceList {
-	margin: 0;
-	text-align: center;
-	background: rgba(224, 224, 209, .6);
-	font-family: "Arial", sans-serif;
-	font-size: 1.6em;
-}
-
-.quizMessage {
-	text-align: center;
-	background: rgba(224, 224, 209, .6);
-	font-family: "Arial", sans-serif;
-	font-size: 1.6em;
-	color: crimson;
-	text-shadow: 1px 1px #ffffff;
-
+    font-family:'Sigmar One', Cursive;
+    font-size: 1.8em;
+    width: 90%;
+    height: auto;
+    margin: 20px auto 0 auto;
+    border-radius: 6px;
+    /*background-color: lightgrey;*/
+    text-align: center;
 }
 
 .timer {
-	text-align: center;
-	background: rgba(224, 224, 209, .6);
-	font-family: 'Sigmar One', cursive;
-	font-size: 1.8em;
+    font-family:'Sigmar One', Cursive;
+    font-size: 1.8em;
+    text-align: center;
 }
 
-.answer {
-	text-align: center;
-	background: rgba(224, 224, 209, .6);
-	font-family: 'Sigmar One', cursive;
-	font-size: 1.8em;
+.quizMessage {
+    background-color: white;
+    border-radius: 6px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    padding: 2px;
+    font-family:'Playball', Cursive;
+    font-size: 1.5em;
+    color: crimson;
 }
 
-h2 {
-	margin: 0 0 20px 0;
-	font-family: "Arial", sans-serif;
-	font-size: 1.6em;
+.choiceList {
+    font-family: Courier, serif;
+    color: crimson;
 }
 
-.btn {
-	font-size: 1.6em;
-	margin: 10px 0 20px 0;
-	padding: 0 40px;
-}
-
-.btn-danger {
-	background-color: crimson;
-	border-color: white;
+.result {
+    width: 30%;
+    height: auto;
+    border-radius: 6px;
+    background-color: gold;
+    color: crimson;
+    margin: auto;
+    text-align: center;
+    font-family: "Arial", sans-serif;
 }

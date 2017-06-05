@@ -1,5 +1,5 @@
 var questions = [{
-    question: "Q1: What was a Russian Tsar?",
+    question: "What was a Russian Tsar?",
     choices: ["Archbishop", "Duke", "Ambassador", "Emperor"],
     correctAnswer: 3
 }, {
@@ -12,11 +12,19 @@ var questions = [{
     correctAnswer: 2
 }, {
     question: "What event ended Russia being ruled by a Tsar?",
-    choices: ["Foundation of the Bolshevik Party", "Imperial Faberge Egg Collection Destroyed", "Russian Revolution of 1917", "Lenin took control of the Russian Parliament"],
+    choices: ["Foundation of the Bolshevik Party", "Imperial Faberge Egg Collection Destroyed", "Russian Revolution of 1917", "Lenin taking control of Russian Parliament"],
     correctAnswer: 2
 }, {
     question: "Where does the word 'Tsar' come from?",
     choices: ["Ancient Bulgaria", "Ancient Rome", "Ancient Mongolia", "Ancient Greece"],
+    correctAnswer: 1
+}, {
+    question: "Which advisor to Nicholas II survived several assassination attempts?",
+    choices: ["Anton the Mensch", "Christina Adrondemov", "Vasily Tandusky", "Grigory Rasputin"],
+    correctAnswer: 3
+}, {
+    question: "What animal is on the Russian Coat of Arms",
+    choices: ["Two-headed Serpent", "Two-headed Eagle", "Roaring Lion", "Prancing Unicorn"],
     correctAnswer: 1
 }];
 
@@ -25,6 +33,16 @@ var correctAnswers = 0;
 var quizOver = false;
 
 $(document).ready(function () {
+    
+    // get timer ready and start countdown
+    $('.timer').rooster('start',
+        {
+        seconds: 30,
+        onComplete: function() {
+        alert('Game Over');
+        }
+        }
+    );
 
     // Display the first question
     displayCurrentQuestion();
@@ -32,12 +50,33 @@ $(document).ready(function () {
 
     // On clicking next, display the next question
     $(this).find(".nextButton").on("click", function () {
+        var counter = 1;
+
+        
+            if(counter == 0){
+                document.getElementById("imgClickAndChange").src = "assets/images/eagle.gif";
+                counter++;
+            }
+            else if(counter == 1){
+                document.getElementById("imgClickAndChange").src = "http://www.ahrc.ac.uk/ahrc/cache/file/F143D5A3-4A7A-41A5-B1C936425CDABD20.png";
+                counter++;
+            }
+            else if(counter == 2){
+                document.getElementById("imgClickAndChange").src = "assets/images/nick.jpg";
+                counter++;
+            }
+            else if(counter == 3){
+                document.getElementById("imgClickAndChange").src = "http://www.metalinjection.net/wp-content/uploads/2014/06/Soviet-Sickle.png";
+                counter = 0;
+            }
+        
+
         if (!quizOver) {
 
             value = $("input[type='radio']:checked").val();
 
             if (value == undefined) {
-                $(document).find(".quizMessage").text("Please select an answer");
+                $(document).find(".quizMessage").text("Select an answer");
                 $(document).find(".quizMessage").show();
             } else {
                 // TODO: Remove any message -> not sure if this is efficient to call this each time....
@@ -100,7 +139,7 @@ function resetQuiz() {
 }
 
 function displayScore() {
-    $(document).find(".quizContainer > .result").text("You scored: " + correctAnswers + " out of: " + questions.length);
+    $(document).find(".quizContainer > .result").text("You scored: " + correctAnswers + " out of " + questions.length);
     $(document).find(".quizContainer > .result").show();
 }
 
