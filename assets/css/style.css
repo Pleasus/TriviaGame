@@ -1,0 +1,86 @@
+body {
+	background-image: url(../images/kremlin.jpg);
+	background-position: center top;
+}
+
+.page-header {
+	background: rgba(224, 224, 209, .8);
+	margin: 20px 0 0 0;
+}
+
+h1 {
+	font-family: 'Sigmar One', cursive;
+}
+
+small {
+	text-shadow: 1px 1px #ffffff;
+}
+
+.subTitle {
+	font-family: 'Playball', cursive;
+	color: crimson;
+	font-size: .9em;
+}
+
+.imgBG {
+	padding-top: 10px;
+	background: rgba(224, 224, 209, .6);
+}
+
+.question {
+	text-align: center;
+	background: rgba(224, 224, 209, .6);
+	font-family: 'Sigmar One', cursive;
+	font-size: 1.8em;
+	padding-top: 25px;
+	/*margin-top: 10px;*/
+}
+
+.choiceList {
+	margin: 0;
+	text-align: center;
+	background: rgba(224, 224, 209, .6);
+	font-family: "Arial", sans-serif;
+	font-size: 1.6em;
+}
+
+.quizMessage {
+	text-align: center;
+	background: rgba(224, 224, 209, .6);
+	font-family: "Arial", sans-serif;
+	font-size: 1.6em;
+	color: crimson;
+	text-shadow: 1px 1px #ffffff;
+
+}
+
+.timer {
+	text-align: center;
+	background: rgba(224, 224, 209, .6);
+	font-family: 'Sigmar One', cursive;
+	font-size: 1.8em;
+}
+
+.answer {
+	text-align: center;
+	background: rgba(224, 224, 209, .6);
+	font-family: 'Sigmar One', cursive;
+	font-size: 1.8em;
+}
+
+h2 {
+	margin: 0 0 20px 0;
+	font-family: "Arial", sans-serif;
+	font-size: 1.6em;
+}
+
+.btn {
+	font-size: 1.6em;
+	margin: 10px 0 20px 0;
+	padding: 0 40px;
+}
+
+.btn-danger {
+	background-color: crimson;
+	border-color: white;
+}
